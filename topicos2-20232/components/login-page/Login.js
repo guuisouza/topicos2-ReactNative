@@ -25,12 +25,14 @@ export default function Login () {
         <View style={styles.form}>
           <FontAwesome5 style={styles.iconLock} name="lock"/>
           <TextInput style={styles.password}/>
-          <TouchableOpacity>
-            <Text> Esqueceu a senha </Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text> Entrar assim mesmo </Text>
-          </TouchableOpacity>
+          <View  style={styles.action}>
+            <TouchableOpacity>
+              <Text style={styles.userText}> Esqueceu a senha </Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text style={styles.userText}> Entrar assim mesmo </Text>
+            </TouchableOpacity>
+          </View>
         </View>  
       </View>
     </SafeAreaView>
@@ -76,5 +78,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     textAlign: "center",
     textAlignVertical: "center"
+  },
+  action : {
+    flexDirection: "row",
+    justifyContent: "space-beetwen"
   }
 })
